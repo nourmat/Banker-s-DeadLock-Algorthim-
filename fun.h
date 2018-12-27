@@ -1,0 +1,14 @@
+void print_mat(int **pointer,int y,int x,char str[]);
+void print_vector(int vec[],int size,char str[]);
+int enter_rec_types();
+int enter_proc_number();
+void enter_available_total_recourses(int rec[] , int rec_num);
+void set_max_matrix(int num_rec,int num_proc,int rec[],int **max);
+void set_need_matrix(int num_rec,int num_proc,int **need,int **allocation,int **max);
+void set_allocation_matrix (int num_rec,int num_proc,int **allocation);
+void set_available(int num_proc,int num_rec,int available[],int rec[],int **allocation);
+bool isSafe (int num_proc,int num_rec,int available[],int **allocation,int **need);
+int* generate_request (int num_rec,int num_proc,int rec[],int **need,int available[]);
+void grante_request(int generate_request[], int **allocation,int available[],int **need,int num_rec);
+void remove_request(int generate_request[], int **allocation,int available[],int **need,int num_rec);
+int* free_request(int num_rec,int num_proc,int **need,int available[],int **allocation);
